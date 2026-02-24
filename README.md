@@ -12,53 +12,49 @@ Many people struggle to save because they lack a clear connection between a smal
 
 
 ### 3. Proposed Features
-1. Goal Initialization - Users can set a target savings amount and a deadline date.
+1. Flexible Transaction Input - Users can manually input transactions or upload CSV/Excel bank statements for bulk processing.
 
-2. Automated Expense Logging - Uses Regular Expressions to parse raw text (e.g., "Spent 200 on Lunch") and extract both the category and the amount.
+2. Smart Categorization - The system uses Regular Expressions (Regex) to automatically sort expenses into categories like "Groceries," "Transport," or "Utilities".
 
-3. Real-time Progress Analysis - Automatically calculates the daily spending allowance based on remaining days and current savings.
+3. Goal Progress Dashboard - A visual summary showing current progress, remaining days, and a dynamically updated "daily allowance".
 
-4. Persistent Database Storage - Uses SQLite to store user profiles, goals, and a full history of transactions.
+4. Dynamic Recommendations - Based on spending trends, the app provides suggestions, such as "Reducing coffee expenses by 10% will help you meet your goal 5 days faster".
 
-5. Interactive Menu - A text based navigation system to log expenses, view goal progress, and update settings.
+5. Persistent Data Storage - All user goals and transaction history are saved in a structured SQLite database to ensure records are preserved.
 
 
 
 ### 4. Python Concepts
-1. Advanced OOP - Implementing classes like User, SavingsGoal, and Transaction with Encapsulation to protect financial data.
+1. Advanced OOP - Implementing classes like User, Account, and Transaction with Encapsulation to protect financial data.
 
-2. Regular Expressions (Regex) - Identifying and extracting currency patterns and keywords from unstructured user input.
+2. Regular Expressions (Regex) - Parsing messy bank statement text to extract amounts and vendor names automatically.
 
-3. Database Integration - Using SQL queries (INSERT, SELECT, UPDATE) to manage and retrieve financial records from an SQLite database.
+3. File Handling & Data Types - Reading and writing CSV/JSON files for statement uploads and data persistence.
 
-4. Error Handling - Using try-except blocks to validate user inputs and prevent program crashes during data entry.
+4. Database Integration - Using SQL queries to store, update, and retrieve financial records efficiently.
 
-5. Data Handling - Using Dictionaries and Lists to process transaction history before saving to the database.
+5. Conditional Logic & Functions - Calculating daily "burn rates" and providing personalized financial advice based on user habits.
 
 
 
 ### 5. Tools and Libraries
-1. re (Regular Expressions) - to scan user input and extract numbers and categories.
+1. Built-in Modules - sqlite3 for the database, re for text parsing, and datetime for tracking deadlines.
 
-2. datetime - for calculating how many days are left until savings deadline.
+2. Data Handling - pandas to process uploaded CSV statements and summarize spending.
 
-3. json - for handling configuration files or temporary data exports if needed.
+3. Web Services (APIs) - The requests library to fetch real-time exchange rates for multi-currency support.
 
-4. requests - to connect to a financial API to fetch a single data point, such as a currency exchange rate.
-
-5. pandas - to create a clean summary table of spending habits.
-
-6. matplotlib or plotly - to generate a bar chart or line graph showing your spending trends over time.
+4. Visualization - Streamlit or Matplotlib to create clear charts of spending trends.
 
 
 
 ### 6. Success Criteria
 The project will be considered successful if:
 
-1. A user can set a goal and see a calculated daily spending limit.
+1. The user can set a savings goal and see an accurate, updated daily spending limit.
 
-2. The system can successfully import and categorize a list of at least 20 different transactions using Regex.
+2. The system successfully parses and categorizes at least 5 different transaction types from a CSV upload.
 
-3. The dashboard correctly updates the "remaining days to goal" whenever a new expense is added.
+3. The program provides at least one "Dynamic Recommendation" based on the user's spending habits.
 
-4. The data remains accurate and persistent even after the program is closed and reopened.
+4. All data is correctly saved to and retrieved from the SQLite database.
