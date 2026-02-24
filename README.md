@@ -5,8 +5,10 @@
 SmartSpend is a personal finance intelligence tool designed to help users bridge the gap between their daily spending habits and their long-term financial goals. Unlike a simple spreadsheet, this system uses Python’s advanced capabilities to automatically categorize expenses, track progress toward a specific savings target, and provide real-time "course corrections" to ensure the user stays on track.
 
 
+
 ### 2. Problem Statement
 Many people struggle to save because they lack a clear connection between a small daily purchase and a large future goal. Existing apps often require tedious manual entry. This project solves that by automating data processing and providing a dynamic "Daily Spend Limit" that adjusts based on how much the user has already spent.
+
 
 
 ### 2. Proposed Features
@@ -21,6 +23,7 @@ Many people struggle to save because they lack a clear connection between a smal
 5. Interactive Menu - A text based navigation system to log expenses, view goal progress, and update settings.
 
 
+
 ### 3. Python Concepts
 1. Advanced OOP - Implementing classes like User, SavingsGoal, and Transaction with Encapsulation to protect financial data.
 
@@ -31,6 +34,7 @@ Many people struggle to save because they lack a clear connection between a smal
 4. Error Handling - Using try-except blocks to validate user inputs and prevent program crashes during data entry.
 
 5. Data Handling - Using Dictionaries and Lists to process transaction history before saving to the database.
+
 
 
 ### 4. Tools and Libraries
