@@ -2,7 +2,7 @@
 ## SmartSpend
 
 ### 1. Project Description
-SmartSpend is a personal finance intelligence tool designed to help users bridge the gap between their daily spending habits and their long-term financial goals. Unlike a simple spreadsheet, this system uses Python’s advanced capabilities to automatically categorize expenses, track progress toward a specific savings target, and provide real-time "course corrections" to ensure the user stays on track.
+SmartSpend is a personal finance intelligence tool designed to help users bridge the gap between their daily spending habits and their long-term financial goals. Unlike a simple spreadsheet, this system uses Python’s advanced capabilities to automatically categorize expenses, track progress toward a specific savings target, and provide real time "course corrections" to ensure the user stays on track.
 
 
 
