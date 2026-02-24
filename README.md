@@ -11,7 +11,7 @@ Many people struggle to save because they lack a clear connection between a smal
 
 
 
-### 2. Proposed Features
+### 3. Proposed Features
 1. Goal Initialization - Users can set a target savings amount and a deadline date.
 
 2. Automated Expense Logging - Uses Regular Expressions to parse raw text (e.g., "Spent 200 on Lunch") and extract both the category and the amount.
@@ -24,7 +24,7 @@ Many people struggle to save because they lack a clear connection between a smal
 
 
 
-### 3. Python Concepts
+### 4. Python Concepts
 1. Advanced OOP - Implementing classes like User, SavingsGoal, and Transaction with Encapsulation to protect financial data.
 
 2. Regular Expressions (Regex) - Identifying and extracting currency patterns and keywords from unstructured user input.
@@ -37,7 +37,7 @@ Many people struggle to save because they lack a clear connection between a smal
 
 
 
-### 4. Tools and Libraries
+### 5. Tools and Libraries
 1. re (Regular Expressions) - to scan user input and extract numbers and categories.
 
 2. datetime - for calculating how many days are left until savings deadline.
@@ -49,3 +49,16 @@ Many people struggle to save because they lack a clear connection between a smal
 5. pandas - to create a clean summary table of spending habits.
 
 6. matplotlib or plotly - to generate a bar chart or line graph showing your spending trends over time.
+
+
+
+### 6. Success Criteria
+The project will be considered successful if:
+
+1. A user can set a goal and see a calculated daily spending limit.
+
+2. The system can successfully import and categorize a list of at least 20 different transactions using Regex.
+
+3. The dashboard correctly updates the "remaining days to goal" whenever a new expense is added.
+
+4. The data remains accurate and persistent even after the program is closed and reopened.
