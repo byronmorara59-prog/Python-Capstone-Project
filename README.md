@@ -2,9 +2,11 @@
 ## SmartSpend
 
 ### 1. Project Description
-This project is a personal finance intelligence tool designed to help users reach specific savings goals by managing their daily spending habits. The main problem it solves is the disconnect between daily small expenses and long-term financial targets. The system calculates a dynamic "Daily Spending Limit" and uses Regex to automatically categorize transactions from raw text inputs, ensuring the user stays on the path to their savings goal.
+SmartSpend is a personal finance intelligence tool designed to help users bridge the gap between their daily spending habits and their long-term financial goals. Unlike a simple spreadsheet, this system uses Python’s advanced capabilities to automatically categorize expenses, track progress toward a specific savings target, and provide real-time "course corrections" to ensure the user stays on track.
 
-Many people struggle to save because they lack a clear connection between a small daily purchase and a large future goal. This project solves that by automating data processing and providing a dynamic "Daily Spend Limit" that adjusts based on how much the user has already spent.
+
+### 2. Problem Statement
+Many people struggle to save because they lack a clear connection between a small daily purchase and a large future goal. Existing apps often require tedious manual entry. This project solves that by automating data processing and providing a dynamic "Daily Spend Limit" that adjusts based on how much the user has already spent.
 
 
 ### 2. Proposed Features
