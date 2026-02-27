@@ -20,10 +20,7 @@ menu = st.sidebar.selectbox(
     "Navigation",
     ["Create Goal", "Add Transaction", "Import PDF", "Dashboard"]
 )
-
-# ----------------------------
 # CREATE GOAL
-# ----------------------------
 if menu == "Create Goal":
     st.subheader("Create a Savings Goal")
 
@@ -41,9 +38,7 @@ if menu == "Create Goal":
         )
         st.success("Goal created successfully!")
 
-# ----------------------------
-# ADD TRANSACTION
-# ----------------------------
+#ADD TRANSACTION
 elif menu == "Add Transaction":
     st.subheader("Add Transaction")
 
@@ -72,9 +67,7 @@ elif menu == "Add Transaction":
             else:
                 st.error(message)
 
-# ----------------------------
-# IMPORT PDF
-# ----------------------------
+#IMPORT PDF
 elif menu == "Import PDF":
     st.subheader("Upload M-Pesa Statement")
 
@@ -92,9 +85,7 @@ elif menu == "Import PDF":
                 count = import_mpesa_pdf(uploaded_pdf, goal_id)
                 st.success(f"{count} transactions imported successfully.")
 
-# ----------------------------
-# DASHBOARD
-# ----------------------------
+#DASHBOARD
 elif menu == "Dashboard":
     st.subheader("Goal Dashboard")
 
