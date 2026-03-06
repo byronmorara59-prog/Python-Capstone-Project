@@ -18,7 +18,7 @@ from Smartspendbackend import (
 )
 
 st.set_page_config(page_title="SmartSpend", layout="wide")
-st.title("SmartSpend 💰")
+st.title("SmartSpend")
 
 menu = st.sidebar.selectbox(
     "Navigation",
@@ -109,7 +109,7 @@ elif menu == "Add Transaction":
                     source_transaction_id=tx_id
                 )
                 if ok:
-                    st.success("Income added + Savings recorded successfully ✅")
+                    st.success("Income added + Savings recorded successfully")
                 else:
                     st.error(msg)
         else:
@@ -117,7 +117,7 @@ elif menu == "Add Transaction":
 
 #Immporting the pdf
 elif menu == "Import PDF":
-    st.subheader("Upload M-Pesa Statement (Analytics only)")
+    st.subheader("Upload M-Pesa Statement")
     st.info("Statement transactions are NOT used in your goal savings dashboard. They are for spending pattern tracking.")
 
     uploaded_pdf = st.file_uploader("Upload PDF", type=["pdf"])

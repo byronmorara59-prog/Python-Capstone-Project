@@ -87,7 +87,7 @@ ensure_column("transactions", "include_in_goal", "INTEGER NOT NULL DEFAULT 1 CHE
 ensure_column("transactions", "statement_label", "TEXT")
 
 # Create savings table
-ensure_table_savings()
+#ensure_table_savings()
 
 
 #Spending categorization
@@ -290,8 +290,8 @@ def saving_feedback(chosen_amount, recommended_amount):
         return f"⚠️ You are saving {round(diff, 2)} less than recommended. You may miss your target."
     elif chosen_amount > recommended_amount:
         diff = chosen_amount - recommended_amount
-        return f"✅ You are saving {round(diff, 2)} more than recommended. You are ahead of schedule."
-    return "✅ Perfect — you’re exactly on track."
+        return f"You are saving {round(diff, 2)} more than recommended. You are ahead of schedule."
+    return "Perfect — you’re exactly on track."
 
 
 # charts showing expenses
