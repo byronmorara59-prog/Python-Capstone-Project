@@ -29,7 +29,7 @@ Many people struggle to save because they lack a clear connection between a smal
 
 2. Regular Expressions (Regex) - Parsing messy bank statement text to extract amounts and vendor names automatically.
 
-3. File Handling & Data Types - Reading and writing CSV/JSON files for statement uploads and data persistence.
+3. File Handling & Data Types - Reading and writing files for statement uploads and data persistence.
 
 4. Database Integration - Using SQL queries to store, update, and retrieve financial records efficiently.
 
@@ -40,7 +40,7 @@ Many people struggle to save because they lack a clear connection between a smal
 ### 5. Tools and Libraries
 1. Built-in Modules - sqlite3 for the database, re for text parsing, and datetime for tracking deadlines.
 
-2. Data Handling - pandas to process uploaded CSV statements and summarize spending.
+2. Data Handling - pandas to process uploaded pdf/csv statements and summarize spending.
 
 3. Regex - For pattern matching to help classify income and expenses.
 
