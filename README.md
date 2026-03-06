@@ -12,7 +12,7 @@ Many people struggle to save because they lack a clear connection between a smal
 
 
 ### 3. Proposed Features
-1. Flexible Transaction Input - Users can manually input transactions or upload CSV/Excel bank statements for bulk processing.
+1. Flexible Transaction Input - Users can manually input transactions or upload pdf mpesa or bank statements.
 
 2. Smart Categorization - The system uses Regular Expressions (Regex) to automatically sort expenses into categories like "Groceries," "Transport," or "Utilities".
 
@@ -42,7 +42,7 @@ Many people struggle to save because they lack a clear connection between a smal
 
 2. Data Handling - pandas to process uploaded CSV statements and summarize spending.
 
-3. Web Services (APIs) - The requests library to fetch real-time exchange rates for multi-currency support.
+3. Regex - For pattern matching to help classify income and expenses.
 
 4. Visualization - Streamlit or Matplotlib to create clear charts of spending trends.
 
@@ -53,7 +53,7 @@ The project will be considered successful if:
 
 1. The user can set a savings goal and see an accurate, updated daily spending limit.
 
-2. The system successfully parses and categorizes at least 5 different transaction types from a CSV upload.
+2. The system successfully parses and categorizes at least 5 different transaction types from a pdf upload.
 
 3. The program provides at least one "Dynamic Recommendation" based on the user's spending habits.
 
