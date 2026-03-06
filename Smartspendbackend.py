@@ -86,9 +86,6 @@ ensure_column("transactions", "source", "TEXT NOT NULL DEFAULT 'manual'")
 ensure_column("transactions", "include_in_goal", "INTEGER NOT NULL DEFAULT 1 CHECK (include_in_goal IN (0,1))")
 ensure_column("transactions", "statement_label", "TEXT")
 
-# Create savings table
-#ensure_table_savings()
-
 
 #Spending categorization
 category_patterns = {
@@ -258,6 +255,7 @@ def generate_recommendations():
         recs.append(f"Reducing {category} spending by 10% could save {reduction}.")
 
     return recs
+
 #Recommendations for savings
 def recommended_saving_from_income(goal_id, income_amount, pay_cycle_days=30):
     metrics = calculate_dashboard_metrics()
@@ -271,13 +269,13 @@ def recommended_saving_from_income(goal_id, income_amount, pay_cycle_days=30):
         return 0.0
 
     if days_remaining <= 0:
-        #deadline passed: recommend as much as possible now
+        #Deadline passed, recommend as much as possible
         return round(min(remaining, income_amount), 2)
 
     daily_required = remaining / days_remaining
     recommended = daily_required * pay_cycle_days
 
-    #cap it so it never recommends more than remaining or income
+    #Cap it so it never recommends more than remaining or income
     recommended = min(recommended, remaining)
     recommended = min(recommended, income_amount)
 
@@ -287,14 +285,14 @@ def recommended_saving_from_income(goal_id, income_amount, pay_cycle_days=30):
 def saving_feedback(chosen_amount, recommended_amount):
     if chosen_amount < recommended_amount:
         diff = recommended_amount - chosen_amount
-        return f"⚠️ You are saving {round(diff, 2)} less than recommended. You may miss your target."
+        return f"You are saving {round(diff, 2)} less than recommended. You may miss your target."
     elif chosen_amount > recommended_amount:
         diff = chosen_amount - recommended_amount
         return f"You are saving {round(diff, 2)} more than recommended. You are ahead of schedule."
     return "Perfect — you’re exactly on track."
 
 
-# charts showing expenses
+#Charts showing expenses
 def _fetch_goal_expense_data(goal_id, group_by="category"):
     if group_by == "category":
         query = """
